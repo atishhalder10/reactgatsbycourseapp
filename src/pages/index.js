@@ -23,7 +23,7 @@ const IndexPage = ({data}) => (
      
     <h1 className="text-white text-center  text-uppercase diaplay-4">I write code</h1>
     <div>
-    <h4 className="text-warning">Learncodeonline.in</h4>
+    <h4 className="text-warning">atishcoursecart.netlify.app</h4>
     </div>
     </BackgroundImage>
 
