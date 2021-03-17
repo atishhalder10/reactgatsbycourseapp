@@ -45,7 +45,7 @@ export default class bundlecart extends Component {
                                              
                                              data-item-image={node.image.fixed.src}
                                              
-                                        className="btn btn-warning  col-10  col-md-5 snipcart-add-item">Join Now </button>
+                                        className="btn btn-warning  col-10  col-md-5 my-5 snipcart-add-item">Join Now </button>
                                     </div>
                             </div>
 
