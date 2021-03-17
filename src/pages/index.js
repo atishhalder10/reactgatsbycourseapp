@@ -11,6 +11,7 @@ import HeroSection from '../components/reuseable/heroSection'
 import Infoblock from  '../components/reuseable/infoblock'
 import Dualinfoblock from '../components/reuseable/Dualinfoblock'
 import Coursecart from '../components/cart/coursecart'
+import Bundlecart from '../components/cart/bundlecart'
 
 const IndexPage = ({data}) => (
   <Layout>
@@ -30,6 +31,7 @@ const IndexPage = ({data}) => (
     
   <Infoblock heading="About Us"/>
   <Coursecart courses={data.courses} />
+  <Bundlecart bundle={data.bundle}/>
   
   <Dualinfoblock heading="Our Team" dualblockmessage="   eum quod odio reiciendis? Accusamus aspernatur natus, perspiciatis tempora architecto earum fugit nisi quas omnis consectetur eius maiores vero sit ut aperiam labore suscipit" bgimage="https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
   
@@ -50,6 +52,21 @@ export const pageQuery = graphql`
         }
       }
     }
+    bundle: allContentfulBundles{
+      edges {
+        node {
+          id
+          title
+          price
+          
+          image {
+            fixed(width: 200, height: 120) {
+              ...GatsbyContentfulFixed_tracedSVG
+            }
+          }
+        }
+      }
+    }
     courses:allContentfulCoursecart{
       edges{
         node{
@@ -60,6 +77,7 @@ export const pageQuery = graphql`
             description{
               description
             }
+            
           image{
             fixed(width:200,height:120){
               ...GatsbyContentfulFixed_tracedSVG
@@ -70,4 +88,5 @@ export const pageQuery = graphql`
       
     }
   }
+
 `;
