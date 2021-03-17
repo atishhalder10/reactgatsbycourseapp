@@ -19,7 +19,7 @@ export default function Contact() {
                 <div className="from-group my-2">
                    <textarea className="form-control" type="text" name="description" id="description" placeholder="Your Message"/> 
                 </div>
-                  <button type="submit" className="btn btn-outline-info btn-block" >Submit</button>    
+                  <button type="submit" className="btn btn-outline-info btn-block mb-5" >Submit</button>    
         </form>  
         </div>
             
