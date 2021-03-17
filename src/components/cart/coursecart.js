@@ -77,7 +77,7 @@ catyClicked = category=> {
                             return(
                                 <div
                                     key={node.id}
-                                    className="col- col-md-6 col-sm-10 d-flex mx-auto px-2 mx-5 my-3">
+                                    className="col- col-md-10 col-sm-10 d-flex mx-auto px-2 mx-5 my-3">
                                         <Img  fixed={node.image.fixed} />
                                         <div className="flex-grow-1 px-3">
                                             <div className="d-flex  justify-content-between">
